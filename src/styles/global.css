@@ -1,0 +1,137 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  padding: 0px;
+  background-color: white;
+}
+
+.tracking-page {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tracking-header {
+  text-align: center;
+}
+
+.search-bar-wrapper {
+  position: relative;
+  z-index: 2;
+  margin-top: 0%;
+
+}
+
+.search-bar button {
+  width: 60px;
+  height: 68px;
+  background-color: #E30613;
+  border: none;
+  border-top-right-radius: 10px; 
+  border-bottom-right-radius: 10px; 
+  border-top-left-radius: 0; 
+  border-bottom-left-radius: 0; 
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar.rtl button {
+  border-top-right-radius: 0; 
+  border-bottom-right-radius: 0; 
+  border-top-left-radius: 10px; 
+  border-bottom-left-radius: 10px; 
+}
+
+.search-bar input {
+  padding: 0 20px;
+  font-size: 18px;
+  width: 395px;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-bar button {
+  width: 60px;
+  height: 68px;
+  background-color: #E30613;
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #E30613;
+}
+
+.search-bar .search-icon {
+  font-size: 40px;
+  color: white;
+}
+
+.order-number {
+  color: #667085;
+  font-size: 12px;
+  margin: 0 !important;
+}
+
+.arriving-date {
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.formatted-date {
+  color: #0098A5;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.expected-date-message {
+  color: #667085;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.shipment-details {
+  color: #667085;
+  margin-bottom: 20px;
+  padding-top: 70px;
+  background: #fff;
+  border-radius: 5px;
+  text-align: left; 
+}
+
+.tracking-event {
+  margin: 15px 0;
+}
+
+.tracking-event strong {
+  font-size: 1.1em;
+}
+
+.tracking-event em {
+  font-size: 0.9em;
+  color: #666;
+}
+
+
+.delivery li.completed {
+  background-color: #4caf50;
+  color: white;
+}
+
+.delivery .timestamp {
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+  color: #555;
+}
+

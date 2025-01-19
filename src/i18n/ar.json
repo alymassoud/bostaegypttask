@@ -1,0 +1,14 @@
+{
+  "LOGO_SRC": "../assets/bosta.ar.png",
+  "ORDER": "الطلب",
+  "ARRIVING_BY": "الوصول خلال",
+  "EXPECTED_DELIVERY": "من المتوقع وصول طلبك خلال 2-3 أيام عمل.",
+  "TRACKING_DETAILS": "تفاصيل التتبع",
+  "NO_TRACKING_DETAILS": "لا توجد تفاصيل تتبع متوفرة.",
+  "stages": {
+    "pickedup": "استلام",
+    "processing": "قيد المعالجة",
+    "out_for_delivery": "في طريقه للتسليم",
+    "delivered": "تم التوصيل"
+  }
+}

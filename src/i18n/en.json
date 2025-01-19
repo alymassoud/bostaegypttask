@@ -1,0 +1,16 @@
+{
+  "LOGO_SRC": "/assets/bosta.en.png",
+  "ORDER": "ORDER",
+  "ARRIVING_BY": "Arriving by",
+  "EXPECTED_DELIVERY": "Your order is expected to arrive within 2-3 working days.",
+  "TRACKING_DETAILS": "Tracking Details",
+  "NO_TRACKING_DETAILS": "No tracking details available.",
+  "stages": {
+    "pickedup": "Picked Up",
+    "processing": "Processing",
+    "out_for_delivery": "Out for Delivery",
+    "delivered": "Delivered"
+  }
+  
+}
+
