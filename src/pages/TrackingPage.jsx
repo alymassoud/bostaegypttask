@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import SearchBar from "../components/SearchBar";
 import ShipmentDetails from "../components/ShipmentDetails";
 import ErrorMessage from "../components/ErrorMessage";
-import { fetchShipmentData } from "../services/apiService";
+import { fetchShipmentData, transformTrackingDetails } from "../services/apiService";
 import "./TrackingPage.css";
 import logoEn from "../assets/bosta.en.png";
 import logoAr from "../assets/bosta.ar.png";
-import { FaAngleDown } from 'react-icons/fa';
+import { FaAngleDown } from "react-icons/fa";
 
 const TrackingPage = () => {
   const { t, i18n } = useTranslation();
@@ -28,12 +28,11 @@ const TrackingPage = () => {
       setShipment({
         trackingNumber: data.TrackingNumber,
         status: data.CurrentStatus.state,
-        expectedDelivery:
+        expectedDelivery: 
           data.CurrentStatus.state === "Delivered" || data.CurrentStatus.state === "Returned"
             ? data.CurrentStatus.state
             : data.PromisedDate,
-        currentStage: data.CurrentStage,
-        timestamps: data.timestamps,
+        trackingDetails: transformTrackingDetails(data),
       });
     } catch (err) {
       setError(err.message);
@@ -56,10 +55,7 @@ const TrackingPage = () => {
         <h1 className="tracking-title">{t("Track Your Order")}</h1>
 
         <div className={`language-switcher ${i18n.language === "ar" ? "rtl" : "ltr"}`}>
-          <span
-            className="language-text"
-            onClick={toggleLanguage}
-          >
+          <span className="language-text" onClick={toggleLanguage}>
             {i18n.language === "en" ? "عربي" : "English"}
           </span>
           <FaAngleDown className="dropdown-icon" onClick={toggleLanguage} />
@@ -77,9 +73,7 @@ const TrackingPage = () => {
         {loading && <p className="loading-text">{t("Loading...")}</p>}
         <ErrorMessage message={error} />
         {shipment && (
-          <>
-            <ShipmentDetails shipment={shipment} />
-          </>
+          <ShipmentDetails shipment={shipment} />
         )}
       </main>
     </div>
